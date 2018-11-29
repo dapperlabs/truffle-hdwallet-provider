@@ -1,10 +1,14 @@
 # truffle-hdwallet-provider
-HD Wallet-enabled Web3 provider. Use it to sign transactions for addresses derived from a 12-word mnemonic.
+HD Wallet-enabled Web3 provider. Use it to sign transactions for addresses derived from a 12-word mnemonic OR private key.
+
+Dapper Labs internal fork with pinned dependencies.
 
 ## Install
 
-```
-$ npm install truffle-hdwallet-provider
+Add a line to this repo in your package.json, make sure the version matches [the latest release](https://github.com/dapperlabs/truffle-hdwallet-provider/releases).
+
+```json
+    "truffle-hdwallet-provider": "git+ssh://git@github.com/dapperlabs/truffle-hdwallet-provider.git#1.0.1"
 ```
 
 ## Requirements
