@@ -7,8 +7,10 @@ Dapper Labs internal fork with pinned dependencies.
 
 Add a line to this repo in your package.json, make sure the version matches [the latest release](https://github.com/dapperlabs/truffle-hdwallet-provider/releases).
 
-```json
-    "truffle-hdwallet-provider": "https://git@github.com/dapperlabs/truffle-hdwallet-provider.git#1.0.1"
+```bash
+npm i -S dapperlabs/truffle-hdwallet-provider#v1.0.1
+# OR
+yarn add dapperlabs/truffle-hdwallet-provider#v1.0.1
 ```
 
 ## Requirements
