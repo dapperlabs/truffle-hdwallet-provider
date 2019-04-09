@@ -2,7 +2,7 @@
   "name": "truffle-hdwallet-provider",
   "version": "1.0.6",
   "description": "HD Wallet-enabled Web3 provider",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "mocha --timeout 5000",
     "prepare": "npx webpack --config webpack/webpack.config.js"
