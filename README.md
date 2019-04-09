@@ -1,21 +1,21 @@
-# truffle-hdwallet-provider
-HD Wallet-enabled Web3 provider. Use it to sign transactions for addresses derived from a 12-word mnemonic OR private key.
-
 Dapper Labs internal fork with pinned dependencies.
+
+Origin:
+https://github.com/trufflesuite/truffle/tree/develop/packages/truffle-hdwallet-provider @ e4d80a8d9141315189b75d04f323e80f7046162f
+
+# truffle-hdwallet-provider
+HD Wallet-enabled Web3 provider. Use it to sign transactions for addresses derived from a 12 or 24 word mnemonic.
 
 ## Install
 
-Add a line to this repo in your package.json, make sure the version matches [the latest release](https://github.com/dapperlabs/truffle-hdwallet-provider/releases).
-
-```bash
-npm i -S dapperlabs/truffle-hdwallet-provider#v1.0.1
-# OR
-yarn add dapperlabs/truffle-hdwallet-provider#v1.0.1
+```
+$ npm install truffle-hdwallet-provider
 ```
 
 ## Requirements
+
 ```
-Node >= 7.6
+Node >= 10
 ```
 
 ## General Usage
@@ -32,6 +32,13 @@ var provider = new HDWalletProvider(mnemonic, "http://localhost:8545", 5);
 
 // Or, use your own hierarchical derivation path
 var provider = new HDWalletProvider(mnemonic, "http://localhost:8545", 5, 1, "m/44'/137'/0'/0/");
+
+
+// HDWalletProvider is compatible with Web3. Use it at Web3 constructor, just like any other Web3 Provider
+const web3 = new Web3(provider); 
+
+// Or, if web3 is alreay initialized, you can call the 'setProvider' on web3, web3.eth, web3.shh and/or web3.bzz
+web3.setProvider(provider)
 
 // ...
 // Write your code here.
@@ -77,7 +84,7 @@ var provider = new HDWalletProvider(privateKeys, "http://localhost:8545", 0, 2);
 
 You can easily use this within a Truffle configuration. For instance:
 
-truffle.js
+truffle-config.js
 ```javascript
 var HDWalletProvider = require("truffle-hdwallet-provider");
 
