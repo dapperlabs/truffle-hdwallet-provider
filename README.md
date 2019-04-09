@@ -1,4 +1,4 @@
-Dapper Labs internal fork with pinned dependencies.
+Dapper Labs internal fork with pinned dependencies. [See releases](https://github.com/dapperlabs/truffle-hdwallet-provider/releases)
 
 Origin:
 https://github.com/trufflesuite/truffle/tree/develop/packages/truffle-hdwallet-provider @ e4d80a8d9141315189b75d04f323e80f7046162f
